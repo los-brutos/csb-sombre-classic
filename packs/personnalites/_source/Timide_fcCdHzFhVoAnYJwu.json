@@ -1,0 +1,165 @@
+{
+  "folder": null,
+  "name": "Timide",
+  "type": "equippableItem",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "hidden": [],
+    "header": {
+      "contents": [],
+      "key": "custom_header",
+      "cssClass": "",
+      "role": 0,
+      "permission": 0,
+      "tooltip": "",
+      "visibilityFormula": "",
+      "type": "panel",
+      "flow": "vertical",
+      "align": "",
+      "collapsible": false,
+      "defaultCollapsed": true,
+      "title": "",
+      "titleStyle": "default"
+    },
+    "body": {
+      "contents": [
+        {
+          "key": "",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "panel",
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "label",
+              "size": "full-size",
+              "icon": "",
+              "value": "Perturbé / Blessé",
+              "prefix": "",
+              "suffix": "",
+              "rollMessage": "",
+              "altRollMessage": "",
+              "rollMessageToChat": true,
+              "altRollMessageToChat": true,
+              "style": "bold"
+            },
+            {
+              "key": "perturbe",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "textField",
+              "label": "",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "autocomplete": ""
+            },
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "label",
+              "size": "full-size",
+              "icon": "",
+              "value": "Désaxé / Mutilé",
+              "prefix": "",
+              "suffix": "",
+              "rollMessage": "",
+              "altRollMessage": "",
+              "rollMessageToChat": true,
+              "altRollMessageToChat": true,
+              "style": "bold"
+            },
+            {
+              "key": "desaxe",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "textField",
+              "label": "",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "autocomplete": ""
+            }
+          ],
+          "flow": "grid-2",
+          "align": "left",
+          "collapsible": false,
+          "defaultCollapsed": false,
+          "title": "",
+          "titleStyle": "default"
+        }
+      ],
+      "key": "custom_body",
+      "cssClass": "",
+      "role": 0,
+      "permission": 0,
+      "tooltip": "",
+      "visibilityFormula": "",
+      "type": "panel",
+      "flow": "vertical",
+      "align": "",
+      "collapsible": false,
+      "defaultCollapsed": true,
+      "title": "",
+      "titleStyle": "default"
+    },
+    "display": {
+      "width": "400",
+      "height": "300",
+      "fix_size": false,
+      "pp_width": "64",
+      "pp_height": "64"
+    },
+    "template": "yRugxU3trjmn3rYH",
+    "props": {
+      "name": "Affectueux",
+      "perturbe": "Anxieux",
+      "desaxe": "Angoissé"
+    },
+    "modifiers": [],
+    "unique": false,
+    "uniqueId": "fcCdHzFhVoAnYJwu",
+    "templateSystemUniqueVersion": 1260604691
+  },
+  "effects": [],
+  "flags": {
+    "custom-system-builder": {
+      "version": "4.1.1"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "custom-system-builder",
+    "systemVersion": "4.1.1",
+    "createdTime": 1729264858433,
+    "modifiedTime": 1729264858433,
+    "lastModifiedBy": "Kvxyis1qgbd9Pbeh"
+  },
+  "_id": "fcCdHzFhVoAnYJwu",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Kvxyis1qgbd9Pbeh": 3
+  },
+  "_key": "!items!fcCdHzFhVoAnYJwu"
+}

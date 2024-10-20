@@ -1,0 +1,3594 @@
+{
+  "name": "_Antagoniste",
+  "type": "_template",
+  "_id": "kN6myAdMKZG0rxyv",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "hidden": [],
+    "header": {
+      "contents": [],
+      "key": "custom_header",
+      "cssClass": "",
+      "role": 0,
+      "permission": 0,
+      "tooltip": "",
+      "visibilityFormula": "",
+      "type": "panel",
+      "flow": "vertical",
+      "align": "",
+      "collapsible": false,
+      "defaultCollapsed": true,
+      "title": "",
+      "titleStyle": "default"
+    },
+    "body": {
+      "contents": [
+        {
+          "key": "",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "panel",
+          "contents": [
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "label",
+              "size": "full-size",
+              "icon": "",
+              "value": "Niveau",
+              "prefix": "",
+              "suffix": "",
+              "rollMessage": "",
+              "altRollMessage": "",
+              "rollMessageToChat": true,
+              "altRollMessageToChat": true,
+              "style": "bold"
+            },
+            {
+              "key": "niveau",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "textField",
+              "label": "",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "autocomplete": ""
+            }
+          ],
+          "flow": "horizontal",
+          "align": "center",
+          "collapsible": false,
+          "defaultCollapsed": false,
+          "title": "",
+          "titleStyle": "default"
+        },
+        {
+          "key": "",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "panel",
+          "contents": [
+            {
+              "key": "avantage",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "textField",
+              "label": "Avantage",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "autocomplete": ""
+            },
+            {
+              "key": "desavantage",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "textField",
+              "label": "Désavantage",
+              "defaultValue": "",
+              "size": "full-size",
+              "charList": "",
+              "autocomplete": ""
+            }
+          ],
+          "flow": "grid-2",
+          "align": "left",
+          "collapsible": false,
+          "defaultCollapsed": false,
+          "title": "",
+          "titleStyle": "default"
+        },
+        {
+          "key": "",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "panel",
+          "contents": [
+            {
+              "key": "body",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "textField",
+              "label": "Corps",
+              "defaultValue": "${niveau}$",
+              "size": "m-small",
+              "charList": "",
+              "autocomplete": ""
+            },
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "label",
+              "size": "full-size",
+              "icon": "hand-fist",
+              "value": "Corps",
+              "prefix": "",
+              "suffix": "",
+              "rollMessage": "<h3>Test de <strong>Corps</strong></h3>\n\n<table>\n  <tbody>\n    <tr>\n      <td><h4>Jet du dé</h4></td>\n      <td>\n        <strong>${roll:=[1d20]}$</strong> / ${!seuil:=round(body, 0)}$\n      </td>\n    </tr>\n    <tr>\n       <td colspan=\"2\">\n        <p style=\"padding: 2px; text-align: center; font-weight: bold; ${!roll<=seuil ? \"color: var(--color-level-success); border: solid 1px var(--color-level-success)\\\">Réussite\" : \"color: var(--color-level-error); border: solid 1px var(--color-level-error)\\\">Echec\"}$</p>\n      </td>\n    </tr>\n  </tbody>\n</table>",
+              "altRollMessage": "",
+              "rollMessageToChat": true,
+              "altRollMessageToChat": true,
+              "style": "label"
+            },
+            {
+              "key": "",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "label",
+              "size": "full-size",
+              "icon": "burst",
+              "value": "Attaque",
+              "prefix": "",
+              "suffix": "",
+              "rollMessage": "<h3><strong>${!name}$</strong> attaque</h3>\n\n<table>\n  <tbody>\n    <tr>\n      <td><h4>Jet de dés</h4></td>\n      <td>\n        <strong>${roll:=[1d20]}$</strong> / ${!seuil:=round(body, 0)}$\n        ${#rollDegats:= [1d6]}$\n      </td>\n    </tr>\n    <tr>\n       <td colspan=\"2\">\n        <p style=\"padding: 2px; text-align: center; font-weight: bold; ${!roll<=seuil ? \"color: var(--color-level-success); border: solid 1px var(--color-level-success)\\\">Réussite\" : \"color: var(--color-level-error); border: solid 1px var(--color-level-error)\\\">Echec\"}$</p>\n      </td>\n    </tr>\n    <tr>\n      <td><h4>Dégats infligés</h4></td>\n      <td>\n        <strong>${roll<=seuil ? (rollDegats <= 4 ? 3 : roll) : 'Aucun'}$</strong>\n      </td>\n    </tr>\n  </tbody>\n</table>",
+              "altRollMessage": "",
+              "rollMessageToChat": true,
+              "altRollMessageToChat": true,
+              "style": "label"
+            }
+          ],
+          "flow": "horizontal",
+          "align": "center",
+          "collapsible": false,
+          "defaultCollapsed": false,
+          "title": "",
+          "titleStyle": "default"
+        },
+        {
+          "key": "",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "label",
+          "size": "full-size",
+          "icon": "",
+          "value": "Background",
+          "prefix": "",
+          "suffix": "",
+          "rollMessage": "",
+          "altRollMessage": "",
+          "rollMessageToChat": true,
+          "altRollMessageToChat": true,
+          "style": "title"
+        },
+        {
+          "key": "background",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "textArea",
+          "label": "",
+          "defaultValue": "",
+          "size": "full-size",
+          "style": "sheet"
+        }
+      ],
+      "key": "custom_body",
+      "cssClass": "",
+      "role": 0,
+      "permission": 0,
+      "tooltip": "",
+      "visibilityFormula": "",
+      "type": "panel",
+      "flow": "vertical",
+      "align": "",
+      "collapsible": false,
+      "defaultCollapsed": true,
+      "title": "",
+      "titleStyle": "default"
+    },
+    "display": {
+      "width": "500",
+      "height": "500",
+      "fix_size": false,
+      "pp_width": "128",
+      "pp_height": "128"
+    },
+    "attributeBar": {},
+    "activeEffects": {},
+    "activeConditionalModifierGroups": [],
+    "templateSystemUniqueVersion": 2823891213
+  },
+  "prototypeToken": {
+    "name": "_Antagoniste",
+    "displayName": 0,
+    "actorLink": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/svg/mystery-man.svg",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "fit": "contain",
+      "scaleX": 1,
+      "scaleY": 1,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "alphaThreshold": 0.75
+    },
+    "hexagonalShape": 0,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "disposition": -1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": null
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "negative": false,
+      "priority": 0,
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "color": null,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    "sight": {
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": [],
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "flags": {},
+    "randomImg": false
+  },
+  "items": [],
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "custom-system-builder": {
+      "version": "4.1.1",
+      "templateHistory": [
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "flow"
+            ],
+            "lhs": "vertical",
+            "rhs": "horizontal"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": "<h3>Niveau</h3>",
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "A",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 1,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "label",
+                "size": "full-size",
+                "icon": "",
+                "value": "Niveau",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "",
+                "altRollMessage": "",
+                "rollMessageToChat": true,
+                "altRollMessageToChat": true,
+                "style": "bold"
+              }
+            }
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "key"
+            ],
+            "lhs": "",
+            "rhs": "niveau"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "type"
+            ],
+            "lhs": "label",
+            "rhs": "textField"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "size"
+            ],
+            "lhs": "full-size",
+            "rhs": "m-small"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "icon"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "value"
+            ],
+            "lhs": "Niveau"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "prefix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "suffix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "rollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "altRollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "rollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "altRollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "style"
+            ],
+            "lhs": "bold"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "charList"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "autocomplete"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "key"
+            ],
+            "lhs": "niveau",
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "type"
+            ],
+            "lhs": "textField",
+            "rhs": "label"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "size"
+            ],
+            "lhs": "m-small",
+            "rhs": "full-size"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "charList"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "autocomplete"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "icon"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "value"
+            ],
+            "rhs": "Niveau"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "prefix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "suffix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "rollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "altRollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "rollMessageToChat"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "altRollMessageToChat"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "style"
+            ],
+            "rhs": "bold"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "align"
+            ],
+            "lhs": "center",
+            "rhs": "left"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "align"
+            ],
+            "lhs": "left",
+            "rhs": "center"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "size"
+            ],
+            "lhs": "m-small",
+            "rhs": "full-size"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              2,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "header",
+              "contents"
+            ],
+            "index": 1,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "panel",
+                "contents": [
+                  {
+                    "key": "avantage",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "type": "textField",
+                    "label": "Avantage",
+                    "defaultValue": "",
+                    "size": "full-size",
+                    "charList": "",
+                    "autocomplete": ""
+                  },
+                  {
+                    "key": "desavantage",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "type": "textField",
+                    "label": "Désavantage",
+                    "defaultValue": "",
+                    "size": "full-size",
+                    "charList": "",
+                    "autocomplete": ""
+                  }
+                ],
+                "flow": "grid-2",
+                "align": "left",
+                "collapsible": false,
+                "defaultCollapsed": false,
+                "title": "",
+                "titleStyle": "default"
+              }
+            }
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents"
+            ],
+            "index": 3,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "background",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "textArea",
+                "label": "",
+                "defaultValue": "",
+                "size": "full-size",
+                "style": "sheet"
+              }
+            }
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "key"
+            ],
+            "lhs": "background",
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "type"
+            ],
+            "lhs": "textArea",
+            "rhs": "label"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "label"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "defaultValue"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "style"
+            ],
+            "lhs": "sheet",
+            "rhs": "title"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "icon"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "value"
+            ],
+            "rhs": "Background"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "prefix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "suffix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "rollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "altRollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "rollMessageToChat"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "altRollMessageToChat"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "type"
+            ],
+            "lhs": "label",
+            "rhs": "panel"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "size"
+            ],
+            "lhs": "full-size"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "icon"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "value"
+            ],
+            "lhs": "Background"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "prefix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "suffix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "rollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "altRollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "rollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "altRollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "style"
+            ],
+            "lhs": "title"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents"
+            ],
+            "rhs": [
+              {
+                "key": "body",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "textField",
+                "label": "Corps",
+                "defaultValue": "${niveau}$",
+                "size": "m-small",
+                "charList": "",
+                "autocomplete": ""
+              },
+              {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "label",
+                "size": "full-size",
+                "icon": "hand-fist",
+                "value": "Corps",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "<h3>Test de <strong>Corps</strong></h3>\n\n<table>\n  <tbody>\n    <tr>\n      <td><h4>Jet du dé</h4></td>\n      <td>\n        <strong>${roll:=[1d20]}$</strong> / ${!seuil:=round(body, 0)}$\n      </td>\n    </tr>\n    <tr>\n       <td colspan=\"2\">\n        <p style=\"padding: 2px; text-align: center; font-weight: bold; ${!roll<=seuil ? \"color: var(--color-level-success); border: solid 1px var(--color-level-success)\\\">Réussite\" : \"color: var(--color-level-error); border: solid 1px var(--color-level-error)\\\">Echec\"}$</p>\n      </td>\n    </tr>\n  </tbody>\n</table>",
+                "altRollMessage": "",
+                "rollMessageToChat": true,
+                "altRollMessageToChat": true,
+                "style": "label"
+              },
+              {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "label",
+                "size": "full-size",
+                "icon": "burst",
+                "value": "Attaque",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "<h3><strong>${!name}$</strong> attaque</h3>\n\n<table>\n  <tbody>\n    <tr>\n      <td><h4>Jet de dés</h4></td>\n      <td>\n        <strong>${roll:=[1d20]}$</strong> / ${!seuil:=round(body, 0)}$\n        ${#rollDegats:= [1d6]}$\n      </td>\n    </tr>\n    <tr>\n       <td colspan=\"2\">\n        <p style=\"padding: 2px; text-align: center; font-weight: bold; ${!roll<=seuil ? \"color: var(--color-level-success); border: solid 1px var(--color-level-success)\\\">Réussite\" : \"color: var(--color-level-error); border: solid 1px var(--color-level-error)\\\">Echec\"}$</p>\n      </td>\n    </tr>\n    <tr>\n      <td><h4>Dégats infligés</h4></td>\n      <td>\n        <strong>${roll<=seuil ? (rollDegats <= 4 ? 3 : roll) : 'Aucun'}$</strong>\n      </td>\n    </tr>\n  </tbody>\n</table>",
+                "altRollMessage": "",
+                "rollMessageToChat": true,
+                "altRollMessageToChat": true,
+                "style": "label"
+              }
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "flow"
+            ],
+            "rhs": "horizontal"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "align"
+            ],
+            "rhs": "center"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "collapsible"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "defaultCollapsed"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "title"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "titleStyle"
+            ],
+            "rhs": "default"
+          },
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents"
+            ],
+            "index": 2,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "label",
+                "size": "full-size",
+                "icon": "burst",
+                "value": "Attaque",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "<h3><strong>${!name}$</strong> attaque</h3>\n\n<table>\n  <tbody>\n    <tr>\n      <td><h4>Jet de dés</h4></td>\n      <td>\n        <strong>${roll:=[1d20]}$</strong> / ${!seuil:=round(body, 0)}$\n        ${#rollDegats:= [1d6]}$\n      </td>\n    </tr>\n    <tr>\n       <td colspan=\"2\">\n        <p style=\"padding: 2px; text-align: center; font-weight: bold; ${!roll<=seuil ? \"color: var(--color-level-success); border: solid 1px var(--color-level-success)\\\">Réussite\" : \"color: var(--color-level-error); border: solid 1px var(--color-level-error)\\\">Echec\"}$</p>\n      </td>\n    </tr>\n    <tr>\n      <td><h4>Dégats infligés</h4></td>\n      <td>\n        <strong>${roll<=seuil ? (rollDegats <= 4 ? 3 : roll) : 'Aucun'}$</strong>\n      </td>\n    </tr>\n  </tbody>\n</table>",
+                "altRollMessage": "",
+                "rollMessageToChat": true,
+                "altRollMessageToChat": true,
+                "style": "label"
+              }
+            }
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "key"
+            ],
+            "lhs": "",
+            "rhs": "desavantage"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "type"
+            ],
+            "lhs": "label",
+            "rhs": "textField"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "icon"
+            ],
+            "lhs": "hand-fist"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "value"
+            ],
+            "lhs": "Corps"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "prefix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "suffix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "rollMessage"
+            ],
+            "lhs": "<h3>Test de <strong>Corps</strong></h3>\n\n<table>\n  <tbody>\n    <tr>\n      <td><h4>Jet du dé</h4></td>\n      <td>\n        <strong>${roll:=[1d20]}$</strong> / ${!seuil:=round(body, 0)}$\n      </td>\n    </tr>\n    <tr>\n       <td colspan=\"2\">\n        <p style=\"padding: 2px; text-align: center; font-weight: bold; ${!roll<=seuil ? \"color: var(--color-level-success); border: solid 1px var(--color-level-success)\\\">Réussite\" : \"color: var(--color-level-error); border: solid 1px var(--color-level-error)\\\">Echec\"}$</p>\n      </td>\n    </tr>\n  </tbody>\n</table>"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "altRollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "rollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "altRollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "style"
+            ],
+            "lhs": "label"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ],
+            "rhs": "Désavantage"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "charList"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "autocomplete"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "key"
+            ],
+            "lhs": "body",
+            "rhs": "avantage"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": "Corps",
+            "rhs": "Avantage"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ],
+            "lhs": "${niveau}$",
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "size"
+            ],
+            "lhs": "m-small",
+            "rhs": "full-size"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "flow"
+            ],
+            "lhs": "horizontal",
+            "rhs": "grid-2"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "align"
+            ],
+            "lhs": "center",
+            "rhs": "left"
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "header",
+              "contents"
+            ],
+            "index": 0,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "panel",
+                "contents": [
+                  {
+                    "key": "",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "type": "label",
+                    "size": "full-size",
+                    "icon": "",
+                    "value": "Niveau",
+                    "prefix": "",
+                    "suffix": "",
+                    "rollMessage": "",
+                    "altRollMessage": "",
+                    "rollMessageToChat": true,
+                    "altRollMessageToChat": true,
+                    "style": "bold"
+                  },
+                  {
+                    "key": "niveau",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "type": "textField",
+                    "label": "",
+                    "defaultValue": "",
+                    "size": "full-size",
+                    "charList": "",
+                    "autocomplete": ""
+                  }
+                ],
+                "flow": "horizontal",
+                "align": "center",
+                "collapsible": false,
+                "defaultCollapsed": false,
+                "title": "",
+                "titleStyle": "default"
+              }
+            }
+          },
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents"
+            ],
+            "index": 4,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "background",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "textArea",
+                "label": "",
+                "defaultValue": "",
+                "size": "full-size",
+                "style": "sheet"
+              }
+            }
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "key"
+            ],
+            "lhs": "background",
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "type"
+            ],
+            "lhs": "textArea",
+            "rhs": "label"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "label"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "defaultValue"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "style"
+            ],
+            "lhs": "sheet",
+            "rhs": "title"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "icon"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "value"
+            ],
+            "rhs": "Background"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "prefix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "suffix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "rollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "altRollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "rollMessageToChat"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              3,
+              "altRollMessageToChat"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "type"
+            ],
+            "lhs": "label",
+            "rhs": "panel"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "size"
+            ],
+            "lhs": "full-size"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "icon"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "value"
+            ],
+            "lhs": "Background"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "prefix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "suffix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "rollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "altRollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "rollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "altRollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "style"
+            ],
+            "lhs": "title"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "contents"
+            ],
+            "rhs": [
+              {
+                "key": "body",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "textField",
+                "label": "Corps",
+                "defaultValue": "${niveau}$",
+                "size": "m-small",
+                "charList": "",
+                "autocomplete": ""
+              },
+              {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "label",
+                "size": "full-size",
+                "icon": "hand-fist",
+                "value": "Corps",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "<h3>Test de <strong>Corps</strong></h3>\n\n<table>\n  <tbody>\n    <tr>\n      <td><h4>Jet du dé</h4></td>\n      <td>\n        <strong>${roll:=[1d20]}$</strong> / ${!seuil:=round(body, 0)}$\n      </td>\n    </tr>\n    <tr>\n       <td colspan=\"2\">\n        <p style=\"padding: 2px; text-align: center; font-weight: bold; ${!roll<=seuil ? \"color: var(--color-level-success); border: solid 1px var(--color-level-success)\\\">Réussite\" : \"color: var(--color-level-error); border: solid 1px var(--color-level-error)\\\">Echec\"}$</p>\n      </td>\n    </tr>\n  </tbody>\n</table>",
+                "altRollMessage": "",
+                "rollMessageToChat": true,
+                "altRollMessageToChat": true,
+                "style": "label"
+              },
+              {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "label",
+                "size": "full-size",
+                "icon": "burst",
+                "value": "Attaque",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "<h3><strong>${!name}$</strong> attaque</h3>\n\n<table>\n  <tbody>\n    <tr>\n      <td><h4>Jet de dés</h4></td>\n      <td>\n        <strong>${roll:=[1d20]}$</strong> / ${!seuil:=round(body, 0)}$\n        ${#rollDegats:= [1d6]}$\n      </td>\n    </tr>\n    <tr>\n       <td colspan=\"2\">\n        <p style=\"padding: 2px; text-align: center; font-weight: bold; ${!roll<=seuil ? \"color: var(--color-level-success); border: solid 1px var(--color-level-success)\\\">Réussite\" : \"color: var(--color-level-error); border: solid 1px var(--color-level-error)\\\">Echec\"}$</p>\n      </td>\n    </tr>\n    <tr>\n      <td><h4>Dégats infligés</h4></td>\n      <td>\n        <strong>${roll<=seuil ? (rollDegats <= 4 ? 3 : roll) : 'Aucun'}$</strong>\n      </td>\n    </tr>\n  </tbody>\n</table>",
+                "altRollMessage": "",
+                "rollMessageToChat": true,
+                "altRollMessageToChat": true,
+                "style": "label"
+              }
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "flow"
+            ],
+            "rhs": "horizontal"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "align"
+            ],
+            "rhs": "center"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "collapsible"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "defaultCollapsed"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "title"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              2,
+              "titleStyle"
+            ],
+            "rhs": "default"
+          },
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents"
+            ],
+            "index": 2,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "label",
+                "size": "full-size",
+                "icon": "burst",
+                "value": "Attaque",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "<h3><strong>${!name}$</strong> attaque</h3>\n\n<table>\n  <tbody>\n    <tr>\n      <td><h4>Jet de dés</h4></td>\n      <td>\n        <strong>${roll:=[1d20]}$</strong> / ${!seuil:=round(body, 0)}$\n        ${#rollDegats:= [1d6]}$\n      </td>\n    </tr>\n    <tr>\n       <td colspan=\"2\">\n        <p style=\"padding: 2px; text-align: center; font-weight: bold; ${!roll<=seuil ? \"color: var(--color-level-success); border: solid 1px var(--color-level-success)\\\">Réussite\" : \"color: var(--color-level-error); border: solid 1px var(--color-level-error)\\\">Echec\"}$</p>\n      </td>\n    </tr>\n    <tr>\n      <td><h4>Dégats infligés</h4></td>\n      <td>\n        <strong>${roll<=seuil ? (rollDegats <= 4 ? 3 : roll) : 'Aucun'}$</strong>\n      </td>\n    </tr>\n  </tbody>\n</table>",
+                "altRollMessage": "",
+                "rollMessageToChat": true,
+                "altRollMessageToChat": true,
+                "style": "label"
+              }
+            }
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "key"
+            ],
+            "lhs": "",
+            "rhs": "desavantage"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "type"
+            ],
+            "lhs": "label",
+            "rhs": "textField"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "icon"
+            ],
+            "lhs": "hand-fist"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "value"
+            ],
+            "lhs": "Corps"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "prefix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "suffix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "rollMessage"
+            ],
+            "lhs": "<h3>Test de <strong>Corps</strong></h3>\n\n<table>\n  <tbody>\n    <tr>\n      <td><h4>Jet du dé</h4></td>\n      <td>\n        <strong>${roll:=[1d20]}$</strong> / ${!seuil:=round(body, 0)}$\n      </td>\n    </tr>\n    <tr>\n       <td colspan=\"2\">\n        <p style=\"padding: 2px; text-align: center; font-weight: bold; ${!roll<=seuil ? \"color: var(--color-level-success); border: solid 1px var(--color-level-success)\\\">Réussite\" : \"color: var(--color-level-error); border: solid 1px var(--color-level-error)\\\">Echec\"}$</p>\n      </td>\n    </tr>\n  </tbody>\n</table>"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "altRollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "rollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "altRollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "style"
+            ],
+            "lhs": "label"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "label"
+            ],
+            "rhs": "Désavantage"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "defaultValue"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "charList"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              1,
+              "autocomplete"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "key"
+            ],
+            "lhs": "body",
+            "rhs": "avantage"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": "Corps",
+            "rhs": "Avantage"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "defaultValue"
+            ],
+            "lhs": "${niveau}$",
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "size"
+            ],
+            "lhs": "m-small",
+            "rhs": "full-size"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "contents",
+              0,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "flow"
+            ],
+            "lhs": "horizontal",
+            "rhs": "grid-2"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "align"
+            ],
+            "lhs": "center",
+            "rhs": "left"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "key"
+            ],
+            "lhs": "desavantage",
+            "rhs": "niveau"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "label"
+            ],
+            "lhs": "Désavantage",
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              1,
+              "maxLength"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "key"
+            ],
+            "lhs": "avantage",
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "type"
+            ],
+            "lhs": "textField",
+            "rhs": "label"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": "Avantage"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "charList"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "autocomplete"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "icon"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "value"
+            ],
+            "rhs": "Niveau"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "prefix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "suffix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "rollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "altRollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "rollMessageToChat"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "altRollMessageToChat"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "contents",
+              0,
+              "style"
+            ],
+            "rhs": "bold"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "flow"
+            ],
+            "lhs": "grid-2",
+            "rhs": "horizontal"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "align"
+            ],
+            "lhs": "left",
+            "rhs": "center"
+          }
+        ]
+      ],
+      "templateHistoryRedo": []
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "custom-system-builder",
+    "systemVersion": "4.1.1",
+    "createdTime": 1729264927138,
+    "modifiedTime": 1729268553161,
+    "lastModifiedBy": "Kvxyis1qgbd9Pbeh"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "Kvxyis1qgbd9Pbeh": 3
+  },
+  "_key": "!actors!kN6myAdMKZG0rxyv"
+}
