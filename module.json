@@ -1,10 +1,10 @@
 {
   "id": "csb-sombre-classic",
   "title": "CSB Sombre classic",
-  "version": "1.0.0",
+  "version": "12.0.1",
   "url": "https://github.com/los-brutos/csb-sombre-classic",
-  "manifest": "https://raw.githubusercontent.com/los-brutos/csb-sombre-classic/12.0.0/module.json",
-  "download": "https://github.com/los-brutos/csb-sombre-classic/releases/download/12.0.0/csb-sombre-classic.zip",
+  "manifest": "https://raw.githubusercontent.com/los-brutos/csb-sombre-classic/12.0.1/module.json",
+  "download": "https://github.com/los-brutos/csb-sombre-classic/releases/download/12.0.1/csb-sombre-classic.zip",
   "changelog": "https://github.com/los-brutos/csb-sombre-classic/raw/main/changelog.md",
   "compatibility": {
     "minimum": "11",
