@@ -12,8 +12,8 @@
       * liste des désavantages
       * possibilité de lier une Personnalité
       * gestion des points d'Esprit et de Corps
-         * apparition des modifications de la personnalité
-         * affichage des points d'adrénaline au fur et à mesure
+         * apparition des modifications de la Personnalité
+         * affichage des cercles d'adrénaline au fur et à mesure
    * automatisation des jets d'Esprit et de Corps
    * automatisation des attaques et affichage des dommages infligés
 * Fiches des antagonistes
@@ -47,23 +47,5 @@ Merci à l'auteur pour l'aimable autorisation de publier ce module.
 
 ## Crédits du jeu de rôle Sombre classic
 
-* **Sombre light** – septembre 2008 / juillet 2019
-  Sombre est une création de Johan Scipion.
-  Terres Etranges et Sombre sont des marques déposées.
-  Retrouvez toutes les informations et ressources pour le jeu Sombre sur le site [Terres Etranges - Sombre](https://www.terresetranges.net/sombre.html)
+Sombre est une création de Johan Scipion.
 
-* **Assistants**
-  Benjamin Frébourg, Sébastien Lenoir, R.Mike, Thomas Munier, Thierry Salaün, Rodolphe Sopracase.
-
-* **Relecture**
-  Fabien Amilin, Axel Bourdeau, David Bréant, Patrick Cialf, Daniel Danjean, Aurélie Guillout-Rossi, Carole Jouis, Thomas Laborey, Guillaume Leroy, Malvina Marchand, Chantal Scipion, Stéphane Treille.
-
-
-
-## Licence
-
-L'ensemble du code est sous licence Creative Commons :
-
-CSB Sombre classic © 2024 by Los Brutos is licensed under [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) 
-
-# 
