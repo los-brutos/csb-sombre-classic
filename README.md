@@ -15,7 +15,7 @@
          * apparition des modifications de la personnalité
          * affichage des points d'adrénaline au fur et à mesure
    * automatisation des jets d'Esprit et de Corps
-   * automatisation des attaques et affichage des dégâts ingligés
+   * automatisation des attaques et affichage des dommages infligés
 * Fiches des antagonistes
    * liste des champs nécessaires et suffisants pour la gestion des antagonistes
    * gestion des jets de Corps et des attaques
