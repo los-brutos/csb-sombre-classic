@@ -24,6 +24,19 @@
     "body": {
       "contents": [
         {
+          "key": "desc",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "textArea",
+          "label": "",
+          "defaultValue": "",
+          "size": "full-size",
+          "style": "dialog"
+        },
+        {
           "key": "",
           "cssClass": "",
           "role": "0",
@@ -66,6 +79,55 @@
               "autocomplete": ""
             },
             {
+              "key": "perturbeDesc",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "textArea",
+              "label": "",
+              "defaultValue": "",
+              "size": "full-size",
+              "style": "dialog"
+            }
+          ],
+          "flow": "vertical",
+          "align": "left",
+          "collapsible": false,
+          "defaultCollapsed": false,
+          "title": "",
+          "titleStyle": "default"
+        },
+        {
+          "key": "",
+          "cssClass": "separator",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "label",
+          "size": "full-size",
+          "icon": "",
+          "value": "",
+          "prefix": "",
+          "suffix": "",
+          "rollMessage": "",
+          "altRollMessage": "",
+          "rollMessageToChat": true,
+          "altRollMessageToChat": true,
+          "style": "label"
+        },
+        {
+          "key": "",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "panel",
+          "contents": [
+            {
               "key": "",
               "cssClass": "",
               "role": "0",
@@ -97,9 +159,22 @@
               "size": "full-size",
               "charList": "",
               "autocomplete": ""
+            },
+            {
+              "key": "desaxeDesc",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "textArea",
+              "label": "",
+              "defaultValue": "",
+              "size": "full-size",
+              "style": "dialog"
             }
           ],
-          "flow": "grid-2",
+          "flow": "vertical",
           "align": "left",
           "collapsible": false,
           "defaultCollapsed": false,
@@ -123,21 +198,21 @@
     },
     "display": {
       "width": "400",
-      "height": "300",
+      "height": "400",
       "fix_size": false,
       "pp_width": "64",
       "pp_height": "64"
     },
     "template": "yRugxU3trjmn3rYH",
     "props": {
-      "name": "Affectueux",
+      "name": "Méthodique",
       "perturbe": "Maniaque",
       "desaxe": "Obsessionnel"
     },
     "modifiers": [],
     "unique": false,
     "uniqueId": "NdsGej0kwSXN8958",
-    "templateSystemUniqueVersion": 1260604691
+    "templateSystemUniqueVersion": 3662284116
   },
   "effects": [],
   "flags": {
@@ -152,8 +227,8 @@
     "systemId": "custom-system-builder",
     "systemVersion": "4.1.1",
     "createdTime": 1729264858433,
-    "modifiedTime": 1729264858433,
-    "lastModifiedBy": "Kvxyis1qgbd9Pbeh"
+    "modifiedTime": 1731089356339,
+    "lastModifiedBy": "gWsDMF9e3kBFXWep"
   },
   "_id": "NdsGej0kwSXN8958",
   "sort": 0,

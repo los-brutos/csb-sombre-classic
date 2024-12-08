@@ -2,6 +2,13 @@
 
 ## v12.0
 
+### v12.0.2
+
+* fiche des antagonistes
+  * possibilité d'avoir plusieurs dés d'attaque
+* fiche des personnalités
+  * possibilité d'ajouter des descriptions pour aider les joueurs
+
 ### v12.0.1
 
 * fiche des PJ

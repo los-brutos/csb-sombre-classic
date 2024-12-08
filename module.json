@@ -1,13 +1,13 @@
 {
   "id": "csb-sombre-classic",
   "title": "CSB Sombre classic",
-  "version": "12.0.1",
+  "version": "12.0.2",
   "url": "https://github.com/los-brutos/csb-sombre-classic",
-  "manifest": "https://raw.githubusercontent.com/los-brutos/csb-sombre-classic/12.0.1/module.json",
-  "download": "https://github.com/los-brutos/csb-sombre-classic/releases/download/12.0.1/csb-sombre-classic.zip",
+  "manifest": "https://raw.githubusercontent.com/los-brutos/csb-sombre-classic/12.0.2/module.json",
+  "download": "https://github.com/los-brutos/csb-sombre-classic/releases/download/12.0.2/csb-sombre-classic.zip",
   "changelog": "https://github.com/los-brutos/csb-sombre-classic/raw/main/changelog.md",
   "compatibility": {
-    "minimum": "11",
+    "minimum": "12",
     "verified": "12"
   },
   "relationships": {
@@ -64,6 +64,18 @@
       },
       "system": "custom-system-builder",
       "flags": {}
+    },
+    {
+      "name": "traits",
+      "label": "Traits",
+      "path": "packs/traits",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "custom-system-builder",
+      "flags": {}
     }
   ],
   "packFolders": [
@@ -81,7 +93,7 @@
         "name": "Ressources pour Sombre classic",
         "sorting": "a",
         "color": "#000000",
-        "packs": ["personnalites"]
+        "packs": ["traits", "personnalites"]
       }
     ]
   }]
