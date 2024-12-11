@@ -1,0 +1,1165 @@
+{
+  "folder": null,
+  "name": "_Trait",
+  "type": "_equippableItemTemplate",
+  "_id": "9SDuh4AJbEk4PMYj",
+  "img": "icons/svg/card-joker.svg",
+  "system": {
+    "hidden": [],
+    "header": {
+      "contents": [
+        {
+          "key": "",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "panel",
+          "contents": [
+            {
+              "key": "avantage",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "radioButton",
+              "label": "Avantage",
+              "size": "full-size",
+              "group": "type",
+              "value": "0",
+              "defaultChecked": false
+            },
+            {
+              "key": "desavantage",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "radioButton",
+              "label": "Désavantage",
+              "size": "full-size",
+              "group": "type",
+              "value": "1",
+              "defaultChecked": false
+            }
+          ],
+          "flow": "horizontal",
+          "align": "center",
+          "collapsible": false,
+          "defaultCollapsed": false,
+          "title": "",
+          "titleStyle": "default"
+        }
+      ],
+      "key": "custom_header",
+      "cssClass": "",
+      "role": 0,
+      "permission": 0,
+      "tooltip": "",
+      "visibilityFormula": "",
+      "type": "panel",
+      "flow": "vertical",
+      "align": "",
+      "collapsible": false,
+      "defaultCollapsed": true,
+      "title": "",
+      "titleStyle": "default"
+    },
+    "body": {
+      "contents": [
+        {
+          "key": "",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "label",
+          "size": "full-size",
+          "icon": "",
+          "value": "Description",
+          "prefix": "",
+          "suffix": "",
+          "rollMessage": "",
+          "altRollMessage": "",
+          "rollMessageToChat": true,
+          "altRollMessageToChat": true,
+          "style": "title"
+        },
+        {
+          "key": "description",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "textArea",
+          "label": "",
+          "defaultValue": "",
+          "size": "full-size",
+          "style": "dialog"
+        }
+      ],
+      "key": "custom_body",
+      "cssClass": "",
+      "role": 0,
+      "permission": 0,
+      "tooltip": "",
+      "visibilityFormula": "",
+      "type": "panel",
+      "flow": "vertical",
+      "align": "",
+      "collapsible": false,
+      "defaultCollapsed": true,
+      "title": "",
+      "titleStyle": "default"
+    },
+    "display": {
+      "width": "400",
+      "height": "400",
+      "fix_size": false,
+      "pp_width": "64",
+      "pp_height": "64"
+    },
+    "uniqueId": "9SDuh4AJbEk4PMYj",
+    "templateSystemUniqueVersion": 223698195
+  },
+  "effects": [],
+  "flags": {
+    "custom-system-builder": {
+      "version": "4.1.1",
+      "templateHistory": [
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "key"
+            ],
+            "lhs": "type",
+            "rhs": "avantage"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "header",
+              "contents"
+            ],
+            "index": 2,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "panel",
+                "contents": [],
+                "flow": "horizontal",
+                "align": "center",
+                "collapsible": false,
+                "defaultCollapsed": false,
+                "title": "",
+                "titleStyle": "default"
+              }
+            }
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "header",
+              "contents"
+            ],
+            "index": 2,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "panel",
+                "contents": [],
+                "flow": "horizontal",
+                "align": "center",
+                "collapsible": false,
+                "defaultCollapsed": false,
+                "title": "",
+                "titleStyle": "default"
+              }
+            }
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "key"
+            ],
+            "lhs": "desavantage",
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "type"
+            ],
+            "lhs": "radioButton",
+            "rhs": "panel"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "label"
+            ],
+            "lhs": "Désavantage"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "size"
+            ],
+            "lhs": "full-size"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "group"
+            ],
+            "lhs": "type"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "value"
+            ],
+            "lhs": "1"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "defaultChecked"
+            ],
+            "lhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "contents"
+            ],
+            "rhs": [
+              {
+                "key": "desavantage",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "radioButton",
+                "label": "Désavantage",
+                "size": "full-size",
+                "group": "type",
+                "value": "1",
+                "defaultChecked": false
+              }
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "flow"
+            ],
+            "rhs": "horizontal"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "align"
+            ],
+            "rhs": "center"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "collapsible"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "defaultCollapsed"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "title"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              1,
+              "titleStyle"
+            ],
+            "rhs": "default"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "A",
+            "path": [
+              "header",
+              "contents"
+            ],
+            "index": 1,
+            "item": {
+              "kind": "D",
+              "lhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "panel",
+                "contents": [
+                  {
+                    "key": "desavantage",
+                    "cssClass": "",
+                    "role": "0",
+                    "permission": "0",
+                    "tooltip": "",
+                    "visibilityFormula": "",
+                    "type": "radioButton",
+                    "label": "Désavantage",
+                    "size": "full-size",
+                    "group": "type",
+                    "value": "1",
+                    "defaultChecked": false
+                  }
+                ],
+                "flow": "horizontal",
+                "align": "center",
+                "collapsible": false,
+                "defaultCollapsed": false,
+                "title": "",
+                "titleStyle": "default"
+              }
+            }
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "key"
+            ],
+            "lhs": "avantage",
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "type"
+            ],
+            "lhs": "radioButton",
+            "rhs": "panel"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": "Avantage"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "size"
+            ],
+            "lhs": "full-size"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "group"
+            ],
+            "lhs": "type"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "value"
+            ],
+            "lhs": "0"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "defaultChecked"
+            ],
+            "lhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents"
+            ],
+            "rhs": [
+              {
+                "key": "avantage",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "radioButton",
+                "label": "Avantage",
+                "size": "full-size",
+                "group": "type",
+                "value": "0",
+                "defaultChecked": false
+              },
+              {
+                "key": "desavantage",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "radioButton",
+                "label": "Désavantage",
+                "size": "full-size",
+                "group": "type",
+                "value": "1",
+                "defaultChecked": false
+              }
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "flow"
+            ],
+            "rhs": "horizontal"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "align"
+            ],
+            "rhs": "center"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "collapsible"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "defaultCollapsed"
+            ],
+            "rhs": false
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "title"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "titleStyle"
+            ],
+            "rhs": "default"
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents"
+            ],
+            "index": 0,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "description",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "textArea",
+                "label": "Description",
+                "defaultValue": "",
+                "size": "full-size",
+                "style": "sheet"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "A",
+            "path": [
+              "body",
+              "contents"
+            ],
+            "index": 1,
+            "item": {
+              "kind": "N",
+              "rhs": {
+                "key": "",
+                "cssClass": "",
+                "role": "0",
+                "permission": "0",
+                "tooltip": "",
+                "visibilityFormula": "",
+                "type": "label",
+                "size": "full-size",
+                "icon": "",
+                "value": "Description",
+                "prefix": "",
+                "suffix": "",
+                "rollMessage": "",
+                "altRollMessage": "",
+                "rollMessageToChat": true,
+                "altRollMessageToChat": true,
+                "style": "title"
+              }
+            }
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "key"
+            ],
+            "lhs": "",
+            "rhs": "description"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "type"
+            ],
+            "lhs": "label",
+            "rhs": "textArea"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "icon"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "value"
+            ],
+            "lhs": "Description"
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "prefix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "suffix"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "rollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "altRollMessage"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "rollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "D",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "altRollMessageToChat"
+            ],
+            "lhs": true
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "style"
+            ],
+            "lhs": "title",
+            "rhs": "sheet"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "label"
+            ],
+            "rhs": "Description"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "defaultValue"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "key"
+            ],
+            "lhs": "description",
+            "rhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "type"
+            ],
+            "lhs": "textArea",
+            "rhs": "label"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "label"
+            ],
+            "lhs": "Description"
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "defaultValue"
+            ],
+            "lhs": ""
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "style"
+            ],
+            "lhs": "sheet",
+            "rhs": "title"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "icon"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "value"
+            ],
+            "rhs": "Description"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "prefix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "suffix"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "rollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "altRollMessage"
+            ],
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "rollMessageToChat"
+            ],
+            "rhs": true
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "altRollMessageToChat"
+            ],
+            "rhs": true
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "label"
+            ],
+            "lhs": "Description",
+            "rhs": ""
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          }
+        ],
+        [
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              1,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "header",
+              "contents",
+              0,
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          },
+          {
+            "kind": "E",
+            "path": [
+              "body",
+              "contents",
+              1,
+              "style"
+            ],
+            "lhs": "sheet",
+            "rhs": "dialog"
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "label"
+            ]
+          },
+          {
+            "kind": "N",
+            "path": [
+              "body",
+              "contents",
+              0,
+              "defaultValue"
+            ]
+          }
+        ]
+      ],
+      "templateHistoryRedo": []
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "custom-system-builder",
+    "systemVersion": "4.2.0",
+    "createdTime": 1733939231716,
+    "modifiedTime": 1733939231716,
+    "lastModifiedBy": "BNF4sR42bgQ5gumU"
+  },
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "BNF4sR42bgQ5gumU": 3
+  },
+  "_key": "!items!9SDuh4AJbEk4PMYj"
+}
