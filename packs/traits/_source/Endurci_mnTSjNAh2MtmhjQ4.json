@@ -1,0 +1,160 @@
+{
+  "folder": "cVvCSjT85bJj1eil",
+  "name": "Endurci",
+  "type": "equippableItem",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "hidden": [],
+    "header": {
+      "contents": [
+        {
+          "key": "",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "panel",
+          "contents": [
+            {
+              "key": "avantage",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "radioButton",
+              "label": "Avantage",
+              "size": "full-size",
+              "group": "type",
+              "value": "0",
+              "defaultChecked": false
+            },
+            {
+              "key": "desavantage",
+              "cssClass": "",
+              "role": "0",
+              "permission": "0",
+              "tooltip": "",
+              "visibilityFormula": "",
+              "type": "radioButton",
+              "label": "Désavantage",
+              "size": "full-size",
+              "group": "type",
+              "value": "1",
+              "defaultChecked": false
+            }
+          ],
+          "flow": "horizontal",
+          "align": "center",
+          "collapsible": false,
+          "defaultCollapsed": false,
+          "title": "",
+          "titleStyle": "default"
+        }
+      ],
+      "key": "custom_header",
+      "cssClass": "",
+      "role": 0,
+      "permission": 0,
+      "tooltip": "",
+      "visibilityFormula": "",
+      "type": "panel",
+      "flow": "vertical",
+      "align": "",
+      "collapsible": false,
+      "defaultCollapsed": true,
+      "title": "",
+      "titleStyle": "default"
+    },
+    "body": {
+      "contents": [
+        {
+          "key": "",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "label",
+          "size": "full-size",
+          "icon": "",
+          "value": "Description",
+          "prefix": "",
+          "suffix": "",
+          "rollMessage": "",
+          "altRollMessage": "",
+          "rollMessageToChat": true,
+          "altRollMessageToChat": true,
+          "style": "title"
+        },
+        {
+          "key": "description",
+          "cssClass": "",
+          "role": "0",
+          "permission": "0",
+          "tooltip": "",
+          "visibilityFormula": "",
+          "type": "textArea",
+          "label": "",
+          "defaultValue": "",
+          "size": "full-size",
+          "style": "dialog"
+        }
+      ],
+      "key": "custom_body",
+      "cssClass": "",
+      "role": 0,
+      "permission": 0,
+      "tooltip": "",
+      "visibilityFormula": "",
+      "type": "panel",
+      "flow": "vertical",
+      "align": "",
+      "collapsible": false,
+      "defaultCollapsed": true,
+      "title": "",
+      "titleStyle": "default"
+    },
+    "display": {
+      "width": "400",
+      "height": "400",
+      "fix_size": false,
+      "pp_width": "64",
+      "pp_height": "64"
+    },
+    "template": "9SDuh4AJbEk4PMYj",
+    "props": {
+      "name": "Endurci",
+      "type": "0",
+      "description": ""
+    },
+    "modifiers": [],
+    "unique": true,
+    "uniqueId": "mnTSjNAh2MtmhjQ4",
+    "templateSystemUniqueVersion": 223698195
+  },
+  "effects": [],
+  "flags": {
+    "custom-system-builder": {
+      "version": "4.1.1"
+    }
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "custom-system-builder",
+    "systemVersion": "4.2.0",
+    "createdTime": 1733688777778,
+    "modifiedTime": 1733939246633,
+    "lastModifiedBy": "BNF4sR42bgQ5gumU"
+  },
+  "_id": "mnTSjNAh2MtmhjQ4",
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "gWsDMF9e3kBFXWep": 3
+  },
+  "_key": "!items!mnTSjNAh2MtmhjQ4"
+}

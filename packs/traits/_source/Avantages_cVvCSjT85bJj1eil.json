@@ -1,0 +1,22 @@
+{
+  "name": "Avantages",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "cVvCSjT85bJj1eil",
+  "description": "",
+  "sort": 100000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "custom-system-builder",
+    "systemVersion": "4.2.0",
+    "createdTime": 1733688777730,
+    "modifiedTime": 1733939246595,
+    "lastModifiedBy": "BNF4sR42bgQ5gumU"
+  },
+  "_key": "!folders!cVvCSjT85bJj1eil"
+}

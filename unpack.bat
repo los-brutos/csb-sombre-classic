@@ -24,6 +24,9 @@ echo.
 echo /// unpack compendium "personnalites"
 call fvtt package unpack -c personnalites
 echo.
+echo /// unpack compendium "traits"
+call fvtt package unpack -c traits
+echo.
 echo * ********************************** *
 echo * all compendiums have been unpacked *
 echo * ********************************** *

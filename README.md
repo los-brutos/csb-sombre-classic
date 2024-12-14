@@ -24,7 +24,9 @@
 #### Objets
 
 * Personalités
-   * liste des personnalités avec leurs deux évolutions
+   * liste des personnalités avec leurs deux évolutions (sans la description des différentes personnalités que vous pourrez retrouver dans les règles de Sombre Classic)
+* Traits
+   * liste des avantages et désavantages (sans la description des différents traits que vous pourrez retrouver dans les règles de Sombre Classic)
 
 ## Installation & configuration
 

@@ -24,6 +24,9 @@ echo.
 echo /// create compendium "personnalites"
 call fvtt package pack personnalites
 echo.
+echo /// create compendium "traits"
+call fvtt package pack traits
+echo.
 echo * ********************************* *
 echo * all compendiums have been created *
 echo * ********************************* *

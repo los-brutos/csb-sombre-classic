@@ -39,6 +39,9 @@ fvtt package unpack -c templates-items
 echo "  * unpack compendium personnalites"
 fvtt package unpack -c personnalites
 
+echo "  * unpack compendium traits"
+fvtt package unpack -c traits
+
 echo "* ********************************** *"
 echo "* all compendiums have been unpacked *"
 echo "* ********************************** *"

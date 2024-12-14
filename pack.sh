@@ -39,6 +39,9 @@ fvtt package pack templates-items
 echo "  * create compendium personnalites"
 fvtt package pack personnalites
 
+echo "  * create compendium traits"
+fvtt package pack traits
+
 echo "* ********************************* *"
 echo "* all compendiums have been created *"
 echo "* ********************************* *"

@@ -1,0 +1,22 @@
+{
+  "name": "Désavantages",
+  "sorting": "a",
+  "folder": null,
+  "type": "Item",
+  "_id": "zqDnsguLYx4Vdtjq",
+  "description": "",
+  "sort": 200000,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "custom-system-builder",
+    "systemVersion": "4.2.0",
+    "createdTime": 1733688777730,
+    "modifiedTime": 1733939246595,
+    "lastModifiedBy": "BNF4sR42bgQ5gumU"
+  },
+  "_key": "!folders!zqDnsguLYx4Vdtjq"
+}
